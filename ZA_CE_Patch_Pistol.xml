@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+
+
+  
+ <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_Revolver</defName>
+    <statBases>
+      <Mass>1.39</Mass>
+      <!-- <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.18</ShotSpread>
+      <SwayFactor>1.27</SwayFactor>
+      <Bulk>1.39</Bulk>
+      <WorkToMake>7000</WorkToMake>
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>30</Steel> -->
+      <!-- <ComponentIndustrial>2</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Pistol_JHP</defaultProjectile>
+      <warmupTime>0.3</warmupTime>
+      <range>20</range>
+      <soundCast>revolver_shot</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>6</magazineSize>
+	  <reloadTime>0.5</reloadTime>
+	  <reloadOneAtATime>true</reloadOneAtATime>
+      <ammoSet>AmmoSet_Pistol</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_Sidearm</li>
+      <li>CE_AI_BROOM</li>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_Revolver"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>0.70,0.70</DrawSize>
+        <DrawOffset>0.0,0.0</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+  
+ <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_Dragoon</defName>
+    <statBases>
+      <Mass>1.6</Mass>
+      <!-- <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.18</ShotSpread>
+      <SwayFactor>1.27</SwayFactor>
+      <Bulk>1.6</Bulk>
+      <WorkToMake>7000</WorkToMake>
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>30</Steel> -->
+      <!-- <ComponentIndustrial>2</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_BlackPowder_Ball</defaultProjectile>
+      <warmupTime>0.3</warmupTime>
+      <range>18</range>
+      <soundCast>dragoon_shot</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>6</magazineSize>
+      <reloadTime>.8</reloadTime>
+	  <reloadOneAtATime>true</reloadOneAtATime>
+      <ammoSet>AmmoSet_BlackPowder</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_Sidearm</li>
+      <li>CE_AI_BROOM</li>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+    <researchPrerequisite>Smithing</researchPrerequisite>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_Dragoon"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>0.70,0.70</DrawSize>
+        <DrawOffset>0.0,0.0</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+  
+ <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_Autopistol</defName>
+    <statBases>
+      <Mass>1.39</Mass>
+      <!-- <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.18</ShotSpread>
+      <SwayFactor>1.27</SwayFactor>
+      <Bulk>1.39</Bulk>
+      <WorkToMake>7000</WorkToMake>
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>30</Steel> -->
+      <!-- <ComponentIndustrial>2</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Pistol_JHP</defaultProjectile>
+      <warmupTime>0.6</warmupTime>
+      <range>20</range>
+      <soundCast>9mmpistol_shot</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>15</magazineSize>
+      <reloadTime>2.6</reloadTime>
+      <ammoSet>AmmoSet_Pistol</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_Sidearm</li>
+      <li>CE_AI_BROOM</li>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>Gunsmithing</researchPrerequisite> -->
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_Autopistol"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>0.70,0.70</DrawSize>
+        <DrawOffset>0.0,0.0</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+   <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_CombatPistol</defName>
+    <statBases>
+      <Mass>1.39</Mass>
+      <!-- <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.18</ShotSpread>
+      <SwayFactor>1.27</SwayFactor>
+      <Bulk>1.39</Bulk>
+      <WorkToMake>7000</WorkToMake>
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>30</Steel> -->
+      <!-- <ComponentIndustrial>2</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Pistol_JHP</defaultProjectile>
+      <warmupTime>0.6</warmupTime>
+      <range>20</range>
+      <soundCast>45_shot</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>14</magazineSize>
+      <reloadTime>2.6</reloadTime>
+      <ammoSet>AmmoSet_Pistol</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_Sidearm</li>
+      <li>CE_AI_BROOM</li>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>Gunsmithing</researchPrerequisite> -->
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_CombatPistol"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>0.70,0.70</DrawSize>
+        <DrawOffset>0.0,0.0</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+     <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_45Pistol</defName>
+    <statBases>
+      <Mass>1.39</Mass>
+      <!-- <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.18</ShotSpread>
+      <SwayFactor>1.27</SwayFactor>
+      <Bulk>1.39</Bulk>
+      <WorkToMake>7000</WorkToMake>
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>30</Steel> -->
+      <!-- <ComponentIndustrial>2</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Pistol_JHP</defaultProjectile>
+      <warmupTime>0.6</warmupTime>
+      <range>20</range>
+      <soundCast>45_shot</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>10</magazineSize>
+      <reloadTime>2.6</reloadTime>
+      <ammoSet>AmmoSet_Pistol</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_Sidearm</li>
+      <li>CE_AI_BROOM</li>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>Gunsmithing</researchPrerequisite> -->
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_45Pistol"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>0.70,0.70</DrawSize>
+        <DrawOffset>0.0,0.0</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_MachinePistol</defName>
+    <statBases>
+      <Mass>2.00</Mass>
+      <!-- <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.16</ShotSpread>
+      <SwayFactor>1.93</SwayFactor>
+      <Bulk>2.00</Bulk>
+      <WorkToMake>24500</WorkToMake>
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>30</Steel> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <recoilAmount>1.75</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Pistol_JHP</defaultProjectile>
+      <warmupTime>0.6</warmupTime>
+      <range>20</range>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+      <soundCast>9mmpistol_shot</soundCast>
+      <soundCastTail>GunTail_Light</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>30</magazineSize>
+      <reloadTime>2.4</reloadTime>
+      <ammoSet>AmmoSet_Pistol</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_SMG</li>
+      <li>CE_AI_BROOM</li>
+      <li>CE_OneHandedWeapon</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>BlowbackOperation</researchPrerequisite> -->
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_MachinePistol"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>0.7,0.7</DrawSize>
+        <DrawOffset>0,0</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+
+</Patch>

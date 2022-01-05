@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_HeavySMG</defName>
+    <statBases>
+      <Mass>2.5</Mass>
+      <!-- <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>1.00</SightsEfficiency>
+      <ShotSpread>0.14</ShotSpread>
+      <SwayFactor>0.94</SwayFactor>
+      <Bulk>2.50</Bulk>
+      <!-- <WorkToMake>24500</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>30</Steel> -->
+      <!-- <Chemfuel>10</Chemfuel> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <recoilAmount>1.50</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Pistol_JHP</defaultProjectile>
+      <!-- <warmupTime>0.6</warmupTime> -->
+      <range>32</range>
+      <burstShotCount>6</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+      <soundCast>9mmsmg_shot</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>45</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_Pistol</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>3</aimedBurstShotCount>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_SMG</li>
+      <li>CE_AI_BROOM</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>BlowbackOperation</researchPrerequisite> -->
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_HeavySMG"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>0.85,0.85</DrawSize>
+        <DrawOffset>0.00,-0.03</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_SuppressedSMG</defName>
+    <statBases>
+      <Mass>2.5</Mass>
+      <!-- <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>1.25</SightsEfficiency>
+      <ShotSpread>0.14</ShotSpread>
+      <SwayFactor>0.94</SwayFactor>
+      <Bulk>2.50</Bulk>
+      <!-- <WorkToMake>24500</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>30</Steel> -->
+      <!-- <Chemfuel>10</Chemfuel> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <recoilAmount>1.50</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Pistol_JHP</defaultProjectile>
+      <!-- <warmupTime>0.6</warmupTime> -->
+      <range>32</range>
+      <burstShotCount>6</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+      <soundCast>supMP5_shot</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>45</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_Pistol</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>3</aimedBurstShotCount>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_SMG</li>
+      <li>CE_AI_BROOM</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>BlowbackOperation</researchPrerequisite> -->
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_SuppressedSMG"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>0.85,0.85</DrawSize>
+        <DrawOffset>0.00,-0.03</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+      <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_45SMG</defName>
+    <statBases>
+      <Mass>3.5</Mass>
+      <!-- <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>1.00</SightsEfficiency>
+      <ShotSpread>0.14</ShotSpread>
+      <SwayFactor>0.94</SwayFactor>
+      <Bulk>3.50</Bulk>
+      <!-- <WorkToMake>24500</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>30</Steel> -->
+      <!-- <Chemfuel>10</Chemfuel> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <recoilAmount>1.50</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Pistol_JHP</defaultProjectile>
+      <!-- <warmupTime>0.6</warmupTime> -->
+      <range>32</range>
+      <burstShotCount>6</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+      <soundCast>45_shot</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>45</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_Pistol</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>3</aimedBurstShotCount>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_SMG</li>
+      <li>CE_AI_BROOM</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>BlowbackOperation</researchPrerequisite> -->
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_45SMG"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>0.85,0.85</DrawSize>
+        <DrawOffset>0.00,-0.03</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+   <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_PDW</defName>
+    <statBases>
+      <Mass>2.5</Mass>
+      <!-- <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>1.25</SightsEfficiency>
+      <ShotSpread>0.14</ShotSpread>
+      <SwayFactor>0.94</SwayFactor>
+      <Bulk>2.50</Bulk>
+      <!-- <WorkToMake>24500</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>30</Steel> -->
+      <!-- <Chemfuel>10</Chemfuel> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <recoilAmount>1.25</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_PDW_AP</defaultProjectile>
+      <!-- <warmupTime>0.6</warmupTime> -->
+      <range>32</range>
+      <burstShotCount>8</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+      <soundCast>5.7mmsmg_shot</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>60</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_PDW</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>4</aimedBurstShotCount>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_SMG</li>
+      <li>CE_AI_BROOM</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>BlowbackOperation</researchPrerequisite> -->
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_PDW"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>0.85,0.85</DrawSize>
+        <DrawOffset>0.00,-0.03</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+     <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_SuppressedPDW</defName>
+    <statBases>
+      <Mass>2.5</Mass>
+      <!-- <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>1.5</SightsEfficiency>
+      <ShotSpread>0.14</ShotSpread>
+      <SwayFactor>0.94</SwayFactor>
+      <Bulk>2.50</Bulk>
+      <!-- <WorkToMake>24500</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>30</Steel> -->
+      <!-- <Chemfuel>10</Chemfuel> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <recoilAmount>1.25</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_PDW_AP</defaultProjectile>
+      <!-- <warmupTime>0.6</warmupTime> -->
+      <range>32</range>
+      <burstShotCount>8</burstShotCount>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+      <soundCast>supMP7_shot</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>60</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_PDW</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>4</aimedBurstShotCount>
+      <aiUseBurstMode>FALSE</aiUseBurstMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_SMG</li>
+      <li>CE_AI_BROOM</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>BlowbackOperation</researchPrerequisite> -->
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_SuppressedPDW"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>0.85,0.85</DrawSize>
+        <DrawOffset>0.00,-0.03</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+
+
+</Patch>

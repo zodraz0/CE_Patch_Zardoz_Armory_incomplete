@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+		<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+			<defName>Gun_SPNKr</defName>
+			<statBases>
+				<WorkToMake>45000</WorkToMake>
+				<Mass>8</Mass>
+				<Bulk>12.0</Bulk>
+				<SwayFactor>2</SwayFactor>
+				<ShotSpread>0.03</ShotSpread>
+				<SightsEfficiency>2</SightsEfficiency>
+				<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+			</statBases>
+			<!-- <costList> -->
+				<!-- <Steel>100</Steel> -->
+      				<!-- <Chemfuel>30</Chemfuel> -->
+      				<!-- <Plasteel>20</Plasteel> -->
+				<!-- <ComponentIndustrial>7</ComponentIndustrial> -->
+			<!-- </costList> -->
+			<Properties>
+      				<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+				<hasStandardCommand>True</hasStandardCommand>
+				<defaultProjectile>Bullet_Rocket_HE</defaultProjectile>
+				<burstShotCount>1</burstShotCount>
+				<warmupTime>2</warmupTime>
+				<range>50</range>
+        				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+        				<minRange>4</minRange>
+				<soundCast>Shot_SPNKr</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>14</muzzleFlashScale>
+				<!-- <onlyManualCast>True</onlyManualCast> -->
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+          					<canTargetPawns>true</canTargetPawns>
+				</targetParams>
+			</Properties>
+    			<AmmoUser>
+      				<magazineSize>2</magazineSize>
+      				<reloadTime>4</reloadTime>
+      				<ammoSet>AmmoSet_Rocket</ammoSet>
+    			</AmmoUser>
+			<FireModes>
+				<aiAimMode>AimedShot</aiAimMode>
+			</FireModes>
+			<AllowWithRunAndGun>false</AllowWithRunAndGun>
+		</Operation>
+  
+</Patch>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+ 
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_PumpShotgun</defName>
+    <statBases>
+      <Mass>3.30</Mass>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+      <ShotSpread>0.20</ShotSpread>
+      <SwayFactor>1.20</SwayFactor>
+      <Bulk>3.30</Bulk>
+      <SightsEfficiency>0.8</SightsEfficiency>
+      <!-- <WorkToMake>9500</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>45</Steel> -->
+      <!-- <WoodLog>10</WoodLog> -->
+      <!-- <ComponentIndustrial>1</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Shotgun_Buck</defaultProjectile>
+      <warmupTime>0.6</warmupTime>
+      <range>25</range>
+      <soundCast>12g_pump_shot</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>6</magazineSize>
+      <reloadOneAtATime>true</reloadOneAtATime>
+      <reloadTime>0.8</reloadTime>
+      <ammoSet>AmmoSet_Shotgun</ammoSet>
+    </AmmoUser>
+    <FireModes />
+    <weaponTags>
+      <li>CE_AI_BROOM</li>
+    </weaponTags>
+    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_PumpShotgun"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.00,1.00</DrawSize>
+        <DrawOffset>0.00,0.0</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_CombatShotgun</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+      <ShotSpread>0.20</ShotSpread>
+      <SwayFactor>1.20</SwayFactor>
+      <Bulk>3.50</Bulk>
+      <SightsEfficiency>0.8</SightsEfficiency>
+      <!-- <WorkToMake>9500</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>45</Steel> -->
+      <!-- <WoodLog>10</WoodLog> -->
+      <!-- <ComponentIndustrial>1</ComponentIndustrial> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Shotgun_Buck</defaultProjectile>
+      <!-- <warmupTime>0.6</warmupTime> -->
+      <range>25</range>
+      <soundCast>12g_pump_shot</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>8</magazineSize>
+      <reloadOneAtATime>true</reloadOneAtATime>
+      <reloadTime>0.8</reloadTime>
+      <ammoSet>AmmoSet_Shotgun</ammoSet>
+    </AmmoUser>
+    <FireModes />
+    <weaponTags>
+      <li>CE_AI_BROOM</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>Gunsmithing</researchPrerequisite> -->
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_CombatShotgun"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.00,1.00</DrawSize>
+        <DrawOffset>0.00,0.0</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+
+  <!-- ========== Chain Shotgun ========== -->
+
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_ChainShotgun</defName>
+    <statBases>
+      <Mass>3.50</Mass>
+      <!-- <RangedWeapon_Cooldown>0.39</RangedWeapon_Cooldown> -->
+      <ShotSpread>0.30</ShotSpread>
+      <SwayFactor>1.26</SwayFactor>
+      <Bulk>3.7</Bulk>
+      <SightsEfficiency>0.8</SightsEfficiency>
+      <!-- <WorkToMake>22500</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>40</Steel> -->
+      <!-- <ComponentIndustrial>3</ComponentIndustrial> -->
+      <!-- <Chemfuel>10</Chemfuel> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Shotgun_Buck</defaultProjectile>
+      <!-- <warmupTime>0.6</warmupTime> -->
+      <range>25</range>
+      <soundCast>12g_shot</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+      <!-- <ticksBetweenBurstShots>15</ticksBetweenBurstShots> -->
+    </Properties>
+    <AmmoUser>
+      <magazineSize>10</magazineSize>
+	  <reloadOneAtATime>true</reloadOneAtATime>
+      <reloadTime>0.8</reloadTime>
+      <ammoSet>AmmoSet_Shotgun</ammoSet>
+    </AmmoUser>
+    <FireModes />
+    <weaponTags>
+      <li>CE_AI_BROOM</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>GasOperation</researchPrerequisite> -->
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_ChainShotgun"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.00,1.00</DrawSize>
+        <DrawOffset>0.00,0.00</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+  
+</Patch>

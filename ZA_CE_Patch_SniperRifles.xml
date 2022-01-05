@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+ 
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_SniperRifle</defName>
+    <statBases>
+      <Mass>5.30</Mass>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <SightsEfficiency>2.6</SightsEfficiency>
+      <ShotSpread>0.05</ShotSpread>
+      <SwayFactor>1.35</SwayFactor>
+      <Bulk>5.30</Bulk>
+      <!-- <WorkToMake>30000</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>60</Steel> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+      <!-- <Chemfuel>15</Chemfuel> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Rifle_FMJ</defaultProjectile>
+      <warmupTime>1.8</warmupTime>
+      <range>75</range>
+        <soundCast>bolt_shot</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>10</magazineSize>
+	  <reloadOneAtATime>true</reloadOneAtATime>
+      <reloadTime>0.8</reloadTime>
+      <ammoSet>AmmoSet_Rifle</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_AI_SR</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>PrecisionRifling</researchPrerequisite> -->
+    <AllowWithRunAndGun>false</AllowWithRunAndGun>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_SniperRifle"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.25,1.45</DrawSize>
+        <DrawOffset>0.15,-0.05</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_PrecisionRifle</defName>
+    <statBases>
+      <Mass>6.30</Mass>
+      <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+      <SightsEfficiency>3.0</SightsEfficiency>
+      <ShotSpread>0.02</ShotSpread>
+      <SwayFactor>1.15</SwayFactor>
+      <Bulk>6.30</Bulk>
+      <!-- <WorkToMake>30000</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>60</Steel> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+      <!-- <Chemfuel>15</Chemfuel> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Rifle_FMJ</defaultProjectile>
+      <warmupTime>1.8</warmupTime>
+      <range>75</range>
+        <soundCast>bolt_shot</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>10</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_Rifle</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_AI_SR</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>PrecisionRifling</researchPrerequisite> -->
+    <AllowWithRunAndGun>false</AllowWithRunAndGun>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_PrecisionRifle"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.25,1.45</DrawSize>
+        <DrawOffset>0.15,-0.05</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+   <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_AMRRifle</defName>
+    <statBases>
+      <Mass>10</Mass>
+      <!-- <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>2.6</SightsEfficiency>
+      <ShotSpread>0.05</ShotSpread>
+      <SwayFactor>1.35</SwayFactor>
+      <Bulk>10</Bulk>
+      <!-- <WorkToMake>30000</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>60</Steel> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+      <!-- <Chemfuel>15</Chemfuel> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Heavy_FMJ</defaultProjectile>
+      <!-- <warmupTime>1.8</warmupTime> -->
+      <range>75</range>
+      <soundCast>AMR_shot</soundCast>
+      <soundCastTail>GunTail_Heavy</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>5</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_Rifle</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_AI_SR</li>
+    </weaponTags>
+    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+    <AllowWithRunAndGun>false</AllowWithRunAndGun>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_AMRRifle"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.25,1.45</DrawSize>
+        <DrawOffset>0.15,-0.05</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_SPRifle</defName>
+    <statBases>
+      <Mass>4.9</Mass>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+      <SightsEfficiency>2.6</SightsEfficiency>
+      <ShotSpread>0.05</ShotSpread>
+      <SwayFactor>1.35</SwayFactor>
+      <Bulk>4.9</Bulk>
+      <!-- <WorkToMake>30000</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>60</Steel> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+      <!-- <Chemfuel>15</Chemfuel> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Intermediate_FMJ</defaultProjectile>
+      <warmupTime>1.8</warmupTime>
+      <range>68</range>
+      <soundCast>5.56rifle_shot</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>20</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_Intermediate</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_AI_SR</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>PrecisionRifling</researchPrerequisite> -->
+    <AllowWithRunAndGun>false</AllowWithRunAndGun>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_SPRifle"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.1,1.1</DrawSize>
+        <DrawOffset>0.15,-0.05</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_RuggedMarksmanRifle</defName>
+    <statBases>
+      <Mass>5.1</Mass>
+      <RangedWeapon_Cooldown>0.8</RangedWeapon_Cooldown>
+      <SightsEfficiency>2.6</SightsEfficiency>
+      <ShotSpread>0.05</ShotSpread>
+      <SwayFactor>1.35</SwayFactor>
+      <Bulk>5.1</Bulk>
+      <!-- <WorkToMake>30000</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>60</Steel> -->
+      <!-- <ComponentIndustrial>5</ComponentIndustrial> -->
+      <!-- <Chemfuel>15</Chemfuel> -->
+    <!-- </costList> -->
+    <Properties>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Rifle_FMJ</defaultProjectile>
+      <warmupTime>1.8</warmupTime>
+      <range>70</range>
+      <soundCast>svd_shot</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>10</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_Rifle</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_AI_SR</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>PrecisionRifling</researchPrerequisite> -->
+    <AllowWithRunAndGun>false</AllowWithRunAndGun>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_RuggedMarksmanRifle"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.1,1.1</DrawSize>
+        <DrawOffset>0.15,-0.05</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+  
+  
+</Patch>

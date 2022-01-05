@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+   
+  <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_ChargeRifle</defName>
+    <statBases>
+      <Mass>4.6</Mass>
+      <!-- <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>1.10</SightsEfficiency>
+      <ShotSpread>0.08</ShotSpread>
+      <SwayFactor>1.20</SwayFactor>
+      <Bulk>4.6</Bulk>
+      <!-- <WorkToMake>48000</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>45</Steel> -->
+      <!-- <Plasteel>25</Plasteel> -->
+      <!-- <ComponentIndustrial>10</ComponentIndustrial> -->
+      <!-- <Chemfuel>10</Chemfuel> -->
+    <!-- </costList> -->
+    <Properties>
+      <recoilAmount>1.51</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Charge</defaultProjectile>
+      <warmupTime>1.0</warmupTime>
+      <range>55</range>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+      <burstShotCount>5</burstShotCount>
+      <soundCast>Shot_ChargeRifle</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>30</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_Charge</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>3</aimedBurstShotCount>
+      <aiUseBurstMode>TRUE</aiUseBurstMode>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_AI_AR</li>
+    </weaponTags>
+    <researchPrerequisite>ChargedShot</researchPrerequisite>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_ChargeRifle"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.03,1.03</DrawSize>
+        <DrawOffset>0.05,0.0</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+    <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+    <defName>Gun_SpacerAssaultRifle</defName>
+    <statBases>
+      <Mass>5</Mass>
+      <!-- <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown> -->
+      <SightsEfficiency>1.10</SightsEfficiency>
+      <ShotSpread>0.08</ShotSpread>
+      <SwayFactor>1.20</SwayFactor>
+      <Bulk>5</Bulk>
+      <!-- <WorkToMake>48000</WorkToMake> -->
+    </statBases>
+    <!-- <costList> -->
+      <!-- <Steel>45</Steel> -->
+      <!-- <Plasteel>25</Plasteel> -->
+      <!-- <ComponentIndustrial>10</ComponentIndustrial> -->
+      <!-- <Chemfuel>10</Chemfuel> -->
+    <!-- </costList> -->
+    <Properties>
+      <recoilAmount>1.51</recoilAmount>
+      <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Bullet_Caseless_APHE</defaultProjectile>
+      <warmupTime>1.0</warmupTime>
+      <range>55</range>
+      <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+      <burstShotCount>8</burstShotCount>
+      <soundCast>pulse_shot</soundCast>
+      <soundCastTail>GunTail_Medium</soundCastTail>
+      <muzzleFlashScale>9</muzzleFlashScale>
+    </Properties>
+    <AmmoUser>
+      <magazineSize>90</magazineSize>
+      <reloadTime>4</reloadTime>
+      <ammoSet>AmmoSet_Caseless</ammoSet>
+    </AmmoUser>
+    <FireModes>
+      <aimedBurstShotCount>4</aimedBurstShotCount>
+      <aiUseBurstMode>TRUE</aiUseBurstMode>
+      <aiAimMode>AimedShot</aiAimMode>
+    </FireModes>
+    <weaponTags>
+      <li>CE_AI_AR</li>
+    </weaponTags>
+    <!-- <researchPrerequisite>ChargedShot</researchPrerequisite> -->
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_SpacerAssaultRifle"]</xpath>
+    <value>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.03,1.03</DrawSize>
+        <DrawOffset>0.05,0.0</DrawOffset>
+      </li>
+    </value>
+  </Operation>
+  
+  
+  
+</Patch>
